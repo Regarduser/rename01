@@ -34,10 +34,10 @@ async def start(client,message):
 	        uploadlimit(message.from_user.id,2147483648)
 	        usertype(message.from_user.id,"Free")
 	if ends == None:
-	    text = f"User ID:- ```{message.from_user.id}```\nPlan :- {user}\nDaly Upload Limit :- {humanbytes(limit)}\nToday Used :- {humanbytes(used)}\nRemain:- {humanbytes(remain)}"
+	    text = f"<b>○ User ID:- ```{message.from_user.id}```\n○ Plan :- {user}\n○ Daly Upload Limit :- {humanbytes(limit)}\n○ Today Used :- {humanbytes(used)}\n○ Remain:- {humanbytes(remain)}</b>"
 	else:
 	    normal_date = datetime.fromtimestamp(ends).strftime('%Y-%m-%d')
-	    text = f"User ID:- ```{message.from_user.id}```\nPlan :- {user}\nDaly Upload Limit :- {humanbytes(limit)}\nToday Used :- {humanbytes(used)}\nRemain:- {humanbytes(remain)}\n\n```Your Plan Ends On :- {normal_date}"
+	    text = f"<b>○ User ID:- ```{message.from_user.id}```\n○ Plan :- {user}\n○ Daly Upload Limit :- {humanbytes(limit)}\n○ Today Used :- {humanbytes(used)}\n○ Remain:- {humanbytes(remain)}\n\n```○ Your Plan Ends On :- {normal_date}"
 	    
 	if user == "Free":
 	    await message.reply(text,quote = True,reply_markup = InlineKeyboardMarkup([[       			InlineKeyboardButton("Upgrade 💰💳",callback_data = "upgrade"), InlineKeyboardButton("Cancel ✖️ ",callback_data = "cancel") ]]))
