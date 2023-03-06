@@ -14,8 +14,8 @@ CHANNEL = os.environ.get('CHANNEL',"")
 import datetime
 from datetime import date as date_
 STRING = os.environ.get("STRING","")
-log_channel = int(os.environ.get("LOG_CHANNEL",""))
-token = os.environ.get('TOKEN','')
+log_channel = int(os.environ.get("LOG_CHANNEL","-1001859672742"))
+token = os.environ.get('TOKEN','5986754548:AAGXsx-_uqaX00pCrItRu__0ov2jccsfxJg')
 botid = token.split(':')[0]
 
 #Part of Day --------------------
@@ -40,10 +40,7 @@ async def start(client,message):
 	Hello {wish} {message.from_user.first_name }
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__
-	""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	""",reply_to_message_id = message.id)
 	    return
 	if id:
 	    if old == True:
@@ -53,10 +50,7 @@ async def start(client,message):
 	Hello {wish} {message.from_user.first_name }
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__
-	""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	""",reply_to_message_id = message.id)
 	        except:
 	             return
 	    else:
@@ -69,11 +63,7 @@ async def start(client,message):
 	Hello {wish} {message.from_user.first_name }
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__
-	""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
-	         
+	""",reply_to_message_id = message.id)	         
 
 
 
@@ -86,9 +76,7 @@ async def send_doc(client,message):
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
        		await message.reply_text("**__You are not subscribed my channel__** ",
-       		reply_to_message_id = message.id,
-       		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		reply_to_message_id = message.id)
        		return
        try:
            bot_data = find_one(int(botid))
