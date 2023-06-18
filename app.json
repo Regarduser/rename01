@@ -42,7 +42,7 @@
         "API_ID": {
 
             "description": "Your APP ID From my.telegram.org ",
-
+            "value": "15135932",
             "required": true
 
         },
@@ -50,7 +50,7 @@
         "API_HASH": {
 
             "description": "Your API Hash From my.telegram.org ",
-
+            "value": "e63f5284308097bc0e8751316dcfa48b",
             "required": true
 
         },
@@ -58,7 +58,7 @@
         "TOKEN": {
 
             "description": "Your Bot Token From @BotFather",
-
+            "value": "5658108591:AAEOr61TZMiht-hnRvGSFEQemS6VST6YRQQ",
             "required": true
 
         },
@@ -74,13 +74,13 @@
         "DB_URL":{
 
              "description":"Database Url Get It From Mongo DB"
-
+             "value": "mongodb+srv://regardalchi091:regardalchi091@cluster0.g4blahy.mongodb.net/",
         },
 
         "DB_NAME":{
 
                "description":"Database Name ",
-
+               "value": "name",
                "required":true
 
         },
@@ -88,7 +88,7 @@
         "LOG_CHANNEL":{
 
              "description":"Channel Id Nedd Store Files Get Your channel id from Rose @MissRose_bot",
-
+             "value": "-1001953686638",
              "required": true
 
         }
